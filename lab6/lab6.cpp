@@ -63,7 +63,7 @@ void Gauss(double** a, double* x, int n) {
 		}
 		x[i] = (x[i] - sum) / a[i][i];
 	}
-	cout << "Гаусс " << clock() - start << endl;
+	cout << "Гаусс через oneTBB " << clock() - start << endl;
 }
 
 void GaussOMP(double** a, double* x, int n) {
@@ -87,7 +87,7 @@ void GaussOMP(double** a, double* x, int n) {
 		}
 		x[i] = (x[i] - sum) / a[i][i];
 	}
-	cout << "Гаусс " << clock() - start << endl;
+	cout << "Гаусс через OpenMP " << clock() - start << endl;
 }
 
 int main()
